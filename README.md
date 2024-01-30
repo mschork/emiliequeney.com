@@ -1,3 +1,4 @@
+# Emiliequeney.com
 # A minimal Astro site with Sanity Studio
 
 This starter uses [Astro](https://astro.build/) for the front end and [Sanity](https://sanity.io/) to handle its content.
