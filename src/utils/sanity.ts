@@ -27,3 +27,28 @@ export interface Post {
   mainImage?: ImageAsset;
   body: PortableTextBlock[];
 }
+
+export async function getProjects(): Promise<Project[]> {
+  return await useSanityClient().fetch(
+    groq`*[_type == "project" && defined(slug.current)] | order(_createdAt desc)`
+  );
+}
+
+export async function getProject(slug: string): Promise<Project> {
+  return await useSanityClient().fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]`,
+    {
+      slug,
+    }
+  );
+}
+
+export interface Project {
+  _type: "project";
+  _createdAt: string;
+  title?: string;
+  slug: Slug;
+  excerpt?: string;
+  mainImage?: ImageAsset;
+  body: PortableTextBlock[];
+}

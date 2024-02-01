@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'project',
-  title: 'Projects',
+  title: 'Project',
   type: 'document',
   fields: [
     defineField({
@@ -27,13 +27,20 @@ export default defineType({
       rows: 4,
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'mainImages', // Changed to plural to reflect multiple images
+      title: 'Main Images',
+      type: 'array',
+      of: [{ type: 'image', options: { hotspot: true } }],
     }),
+    
+    // defineField({
+    //   name: 'mainImage',
+    //   title: 'Main image',
+    //   type: 'image',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // }),
     defineField({
       name: 'body',
       title: 'Body',

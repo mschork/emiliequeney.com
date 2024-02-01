@@ -1,14 +1,17 @@
 ---
 import Card from "../components/Card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import { getPosts } from "../utils/sanity";
+import { getPosts, getProjects } from "../utils/sanity";
 
 const posts = await getPosts();
+const projects = await getProjects();
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="EmilieQueney">
   <section>
     {posts.length ? posts.map((post) => <Card post={post} />) : <Welcome />}
+    {projects.length ? projects.map((project) => <ProjectCard project={project} />) : <Welcome />}
   </section>
 </Layout>
