@@ -26,21 +26,21 @@ export default defineType({
       type: 'text',
       rows: 4,
     }),
-    defineField({
-      name: 'mainImages', // Changed to plural to reflect multiple images
-      title: 'Main Images',
-      type: 'array',
-      of: [{ type: 'image', options: { hotspot: true } }],
-    }),
-    
     // defineField({
-    //   name: 'mainImage',
-    //   title: 'Main image',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
+    //   name: 'mainImages', // Changed to plural to reflect multiple images
+    //   title: 'Main Images',
+    //   type: 'array',
+    //   of: [{ type: 'image', options: { hotspot: true } }],
     // }),
+    
+    defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: 'body',
       title: 'Body',
