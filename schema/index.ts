@@ -1,4 +1,24 @@
-import blockContent from './blockContent'
-import post from './post'
+import project from './project'
+import workshop from './workshop'
+import publication from './publication'
 
-export const schemaTypes = [post, blockContent]
+import brand from './brand'
+import location from './location'
+import award from './award'
+// import residency from './residency'
+
+
+import post from './post'
+import blockContent from './blockContent'
+
+export const schemaTypes = [
+    project, 
+    workshop,
+    publication,
+    brand,
+    location,
+    award,
+    // residency,
+    post, 
+    blockContent
+]
