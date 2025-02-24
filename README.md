@@ -1,3 +1,4 @@
+# Outdated!! To BE DELETED
 # Emiliequeney.com
 # A minimal Astro site with Sanity Studio
 
